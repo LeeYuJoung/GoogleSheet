@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using GoogleSheet;
 
 public class SelectButtonOnClick : MonoBehaviour
 {
     public int nodeNum;
-    public GameBookManager gameBookManager;
+    public GameBookManagerGSTU gameBookManager;
 
     void Start()
     {

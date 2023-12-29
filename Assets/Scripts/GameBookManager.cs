@@ -36,6 +36,7 @@ public class GameBookManager : MonoBehaviour
     public GameObject scriptOBJPrefab;
     public GameObject selectOBJPrefab;
     public GameObject resultOBJPrefab;
+    public GameObject gameoverPanel;
 
     [Header("GameBook")]
     public int sceneIDX = 1;
@@ -60,6 +61,7 @@ public class GameBookManager : MonoBehaviour
 
     void Start()
     {
+        gameoverPanel.SetActive(false);
         nodeData = CSVReader.Read(nodeDataPath);
         scriptData = CSVReader.Read(scriptDataPath);
         parentCanvas = GameObject.Find("Content").GetComponent<Transform>();
@@ -149,7 +151,7 @@ public class GameBookManager : MonoBehaviour
 
         obj.GetComponentInChildren<Text>().text = str;
         obj.GetComponent<SelectButtonOnClick>().nodeNum = n;
-        obj.GetComponent<SelectButtonOnClick>().gameBookManager = this;
+        //obj.GetComponent<SelectButtonOnClick>().gameBookManager = this;
 
         selectList.Add(obj);
         obj.SetActive(false);
@@ -163,7 +165,7 @@ public class GameBookManager : MonoBehaviour
             target.SetActive(true);
             string targetText = target.GetComponentInChildren<Text>().text;
             target.GetComponentInChildren<Text>().text = "";
-            target.GetComponentInChildren<Text>().DOText(targetText, targetText.Length * 0.25f, true).OnComplete(() => Destroy(target, 1.0f));
+            target.GetComponentInChildren<Text>().DOText(targetText, targetText.Length * 0.2f, true).OnComplete(() => Destroy(target, 0.25f));
         }
         else
         {

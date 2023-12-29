@@ -1004,7 +1004,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1373548544}
-  - component: {fileID: 1373548543}
+  - component: {fileID: 1373548545}
   m_Layer: 0
   m_Name: GameBookManager
   m_TagString: Untagged
@@ -1012,31 +1012,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1373548543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373548542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af3178239645ddb4eaaf3dddbe2bc29e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeDataPath: SceneNode
-  scriptDataPath: SceneScript
-  dataList: []
-  selectList: []
-  parentCanvas: {fileID: 1317731739}
-  sceneIDX_TXT: {fileID: 1019477062}
-  scriptOBJPrefab: {fileID: 6942767705716783558, guid: a58d5138f232ba7478e13566ec8f131e, type: 3}
-  selectOBJPrefab: {fileID: 3306425513257915918, guid: 928c44d3e9c48b54eae2d8472bd9b4e0, type: 3}
-  resultOBJPrefab: {fileID: 8666396834488404154, guid: 045593663bac74b4598acfdc6724f3c8, type: 3}
-  gameoverPanel: {fileID: 1004089912}
-  sceneIDX: 1
-  SceneType: 0
-  scriptType: 0
 --- !u!4 &1373548544
 Transform:
   m_ObjectHideFlags: 0
@@ -1052,6 +1027,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1373548545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373548542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4f3d555c5434734d8208cdffc5d50ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sheetID: 1KTPY6Hz_r_sqdrD4VqZKMyLTmMy_fA8HgP4OQ6RHu-Y
+  nodeSheetName: SceneNode
+  scriptSheetName: SceneScript
+  nodeSheetCols:
+  - IDX
+  - TYPE
+  - N1
+  - N2
+  - N3
+  - N4
+  - N5
+  scriptSheetCols:
+  - IDX
+  - SceneNum
+  - Type
+  - Naration
+  - ScriptA
+  - ScriptB
+  dataList: []
+  selectList: []
+  parentCanvas: {fileID: 2060545954}
+  sceneIDX_TXT: {fileID: 1019477062}
+  scriptOBJPrefab: {fileID: 6942767705716783558, guid: a58d5138f232ba7478e13566ec8f131e, type: 3}
+  selectOBJPrefab: {fileID: 3306425513257915918, guid: 928c44d3e9c48b54eae2d8472bd9b4e0, type: 3}
+  resultOBJPrefab: {fileID: 8666396834488404154, guid: 045593663bac74b4598acfdc6724f3c8, type: 3}
+  gameoverPanel: {fileID: 1004089912}
+  sceneIDX: 1
+  SceneType: 0
+  scriptType: 0
 --- !u!1 &1642526616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,8 +1243,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1373548543}
-        m_TargetAssemblyTypeName: GameBookManager, Assembly-CSharp
+      - m_Target: {fileID: 1373548545}
+        m_TargetAssemblyTypeName: GameBookManagerGSTU, Assembly-CSharp
         m_MethodName: NextButton
         m_Mode: 1
         m_Arguments:
